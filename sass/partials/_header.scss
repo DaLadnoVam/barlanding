@@ -1,0 +1,131 @@
+.header {
+	@include box;
+	padding: 74px 0 24px 0;
+	@media (max-width: 1439px){
+		padding-top: 40px;
+	}
+	@media (max-width: 1279px){
+		padding-top: 25px;
+	}
+	@media (max-width: 1023px){
+		padding: 10px 0;
+	}
+	&__wrapper{
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		@media (max-width: 1023px){
+			align-items: center;	
+		}
+	}
+	&__nav{
+		position: relative;
+		@media (max-width: 1023px){
+			order: 4;
+		}
+	}
+	&__list{
+		display: flex;
+		gap: 16px;
+		@media (max-width: 1023px){
+			display: none;
+		}
+	}
+	&__item{
+		position: relative;
+		padding: 4px 0;
+		&:hover a{
+			border-bottom: 2px solid rgba($color2, 0.97);
+		}
+	}
+	&__link{
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 119%;
+		letter-spacing: 0.02em;
+		padding: 0 12px;
+		box-sizing: border-box;
+	}
+	&__burger{
+		display: none;
+		width: 40px;
+		height: 40px;
+		background-color: $color2;
+		border-radius: 5px;
+		position: relative;
+		@media (max-width: 1023px){
+			display: block;
+		}
+		span{
+			display: block;
+			background-color: #FFF;
+			width: 30px;
+			height: 4px;
+			border-radius: 3px;
+			position: absolute;
+			top: 50%;
+			left: 5px;
+			transform: translateY(-50%);
+			z-index: 2;
+			&:first-child{
+				top: 10px;
+			}
+			&:last-child{
+				top: 30px;
+			}
+		}
+	}
+	&__logo{
+		width: 103px;
+		height: 88px;
+		overflow: hidden;
+		@media (max-width: 1023px){
+			order: 1;
+		}
+		a{
+			display: block;
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		h1{
+			text-indent: -9999px;
+		}
+	}
+	&__text{
+		padding: 4px 12px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 119%;
+		@media (max-width: 1023px){
+			order: 2;
+		}
+	}
+	&__phone{
+		display: grid;
+		grid-auto-flow: column;
+		padding: 4px 0;
+		@media (max-width: 1023px){
+			order: 3;
+		}
+		@media (max-width: 767px){
+			display: none;
+		}
+		a{
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 119%;
+			color: $color1;
+			padding: 0 12px;
+		}
+		img{
+			width: 17px;
+			height: 17px;
+		}
+	}
+
+}

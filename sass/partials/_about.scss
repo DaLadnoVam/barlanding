@@ -1,0 +1,90 @@
+.about{
+    padding: 106px 0 93px 0;
+    @media (max-width: 1023px){
+        padding: 75px 0 93px 0;
+    }
+    @media (max-width: 767px){
+        padding: 50px 0 93px 0;
+    }
+    .layout{
+        overflow: visible;
+    }
+    &__title{
+        position: relative;
+        margin-bottom: 19px;
+        span{
+            background: #FFF;
+            position: relative;
+            padding: 0 22px 0 11px;
+            z-index: 3;
+        }
+    }
+    &__text{
+        max-width: 1000px;
+        min-height: 200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        p{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            text-transform: capitalize;
+            color: $color1;
+        }
+    }
+    .wrapper-line{
+        position: relative;
+        width: 100%;
+        padding: 0 0 18px 0;
+        &::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: $color2;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+        &::before{
+            content: '';
+            display: block;
+            width: 2px;
+            height: 40px;
+            background: $color2;
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+    }
+    &__circle{
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: $color2;
+        position: absolute;
+        bottom: -54px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        &::before{
+            content: '';
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: $color2;
+            position: absolute;
+            bottom: -39px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+    }
+}

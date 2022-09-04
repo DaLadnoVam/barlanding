@@ -1,0 +1,113 @@
+.first-view{
+    padding: 180px 0 80px 0;
+    background: url(../images/first-view-bg.jpg) bottom center / cover no-repeat;
+    height: 100%;
+    overflow: visible;
+    // background-blend-mode: blur(4px);
+    @media (max-width: 1440px){
+        padding: 140px 0 50px 0;
+    }
+    @media (max-width: 1023px){
+        padding: 90px 0 40px 0;
+    }
+    @media (max-width: 767px){
+        padding: 40px 0 40px 0;
+    }
+    .layout{
+        margin-bottom: 80px;
+    }
+    &__title{
+        margin-bottom: 250px;
+        font-weight: 500;
+        font-size: 44px;
+        line-height: 119%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        @media (max-width: 767px){
+            margin-bottom: 175px;
+        }
+    }
+    &__form{
+        display: block;
+        width: max-content;
+        margin: 0 auto;
+        .form__wrapper{
+            display: flex;
+            gap: 19px;
+            margin-bottom: 37px;
+            @media (max-width: 555px){
+                flex-direction: column;
+            }
+        }
+        select, input{
+            width: 160px;
+            height: 40px;
+            background: #FFFFFF;
+            border: none;
+        }
+        button{
+            display: block;
+            background: $color2;
+            border: none;
+            cursor: pointer;
+            width: 160px;
+            height: 40px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            margin: 0 auto;
+        }
+    }
+    .scroll{
+        font-style: normal;
+        font-weight: 500;
+        line-height: 119%;
+        text-align: center;
+        letter-spacing: 0.08em;
+        color: rgba($color2, 0.97);
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            width: 2px;
+            height: 112px;
+            background: rgba($color2, 0.97);
+            position: absolute;
+            top: 39px;
+            transform: translateX(-50%);
+            left: 50%;
+            z-index: 2;
+            @media (max-width: 1023px){
+                height: 75px;
+            }
+            @media (max-width: 767px){
+                height: 50px;
+            }
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba($color2, 0.97);
+            position: absolute;
+            top: 151px;
+            transform: translateX(-50%);
+            left: 50%;
+            z-index: 2;
+            @media (max-width: 1023px){
+                top: 114px;
+            }
+            @media (max-width: 767px){
+                top: 89px;
+            }
+        }
+    }
+}
